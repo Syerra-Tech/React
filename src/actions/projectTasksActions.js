@@ -3,7 +3,7 @@ import {GET_ERRORS, GET_PROJECT_TASKS} from "./types";
 
 export const addProjectTask = (project_task, history) => async dispatch => {
     try{
-        await axios.post("http://baeldung-env.e2dpzqqyit.us-east-2.elasticbeanstalk.com/api/board", project_task);
+        await axios.post("https://baeldung-env.e2dpzqqyit.us-east-2.elasticbeanstalk.com/api/board", project_task);
         history.push("/projectBoard");
         dispatch({
             type: GET_ERRORS,
